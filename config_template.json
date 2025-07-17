@@ -1,0 +1,28 @@
+{
+    "account_id": "YOUR_ACCOUNT_ID",
+    "access_token": "YOUR_ACCESS_TOKEN",
+    "practice": true,
+    "trading": {
+        "instruments": ["EUR_USD", "GBP_USD", "USD_JPY"],
+        "position_size": 1000,
+        "max_positions": 2,
+        "stop_loss_pips": 20,
+        "take_profit_pips": 40,
+        "risk_per_trade": 0.01
+    },
+    "strategy": {
+        "rsi_period": 14,
+        "rsi_oversold": 30,
+        "rsi_overbought": 70,
+        "ma_fast": 20,
+        "ma_slow": 50,
+        "timeframe": "M5"
+    },
+    "system": {
+        "log_level": "INFO",
+        "log_file": "logs/forex_bot.log",
+        "check_interval": 300,
+        "max_retries": 3,
+        "retry_delay": 60
+    }
+}
