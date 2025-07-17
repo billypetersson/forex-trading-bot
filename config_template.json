@@ -3,20 +3,33 @@
     "access_token": "YOUR_ACCESS_TOKEN",
     "practice": true,
     "trading": {
-        "instruments": ["EUR_USD", "GBP_USD", "USD_JPY"],
-        "position_size": 1000,
-        "max_positions": 2,
-        "stop_loss_pips": 20,
-        "take_profit_pips": 40,
-        "risk_per_trade": 0.01
+        "instruments": ["EUR_USD", "GBP_USD", "USD_JPY", "AUD_USD"],
+        "max_positions": 2
     },
-    "strategy": {
+    "algorithm": {
         "rsi_period": 14,
         "rsi_oversold": 30,
         "rsi_overbought": 70,
-        "ma_fast": 20,
-        "ma_slow": 50,
-        "timeframe": "M5"
+        "macd_fast": 12,
+        "macd_slow": 26,
+        "macd_signal": 9,
+        "ema_fast": 20,
+        "ema_slow": 50,
+        "ema_trend": 200,
+        "adx_period": 14,
+        "adx_threshold": 25,
+        "bb_period": 20,
+        "bb_std": 2,
+        "stoch_period": 14,
+        "lookback_period": 50,
+        "sr_threshold": 0.002
+    },
+    "risk_management": {
+        "max_risk_per_trade": 0.01,
+        "max_daily_loss": 0.05,
+        "max_correlation_risk": 0.7,
+        "position_scaling": true,
+        "use_kelly_criterion": false
     },
     "system": {
         "log_level": "INFO",
